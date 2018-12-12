@@ -19,9 +19,8 @@
     <PackageProjectUrl></PackageProjectUrl>
     <Description>Contains analyser which helps to find issue: "Namespace must match file location"</Description>
     <PackageTags>roslyn analyzer analyser code analysis fix refactoring csharp c# namespace</PackageTags>
-    <NoPackageAnalysis>true</NoPackageAnalysis>
-    
-    <!--<RepositoryUrl></RepositoryUrl>-->
+    <NoPackageAnalysis>true</NoPackageAnalysis>    
+    <RepositoryUrl>https://github.com/komanton/NamespaceResolver</RepositoryUrl>
     <!--<PackageIconUrl></PackageIconUrl>-->
     <!--<PackageReleaseNotes></PackageReleaseNotes>-->
     <!--<Copyright>Copyright</Copyright>-->
