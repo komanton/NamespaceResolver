@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+	<PackageTargetFallback>portable-net45+win8+wp8+wpa81</PackageTargetFallback>
+    <AssemblyName>NamespaceResolver</AssemblyName>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>NamespaceResolver</PackageId>
+    <PackageVersion>1.0.1</PackageVersion>
+    <Title>Namespace must match file location (Analyzer)</Title>
+    <Authors>Anton Komarov</Authors>
+    <Owners>Anton Komarov</Owners>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <Description>Contains analyser which helps to find issue: "Namespace must match file location"</Description>
+    <PackageTags>roslyn analyzer analyser code analysis fix refactoring csharp c# namespace</PackageTags>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    
+    <!--<RepositoryUrl></RepositoryUrl>-->
+    <!--<PackageIconUrl></PackageIconUrl>-->
+    <!--<PackageReleaseNotes></PackageReleaseNotes>-->
+    <!--<Copyright>Copyright</Copyright>-->
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="tools" />
+    <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.2.0" />
+	<PackageReference Update="NETStandard.Library" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
